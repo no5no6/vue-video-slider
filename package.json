@@ -1,0 +1,33 @@
+{
+  "name": "vue-video-slider",
+  "version": "0.0.1",
+  "description": "vue2.X video-slider",
+  "main": "index.js",
+  "dependencies": {
+    "dragdealer": "^0.9.9",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "vue": "^2.1.10",
+    "vue-video-player": "^2.5.0",
+    "vuex": "^2.1.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LittleChild/vue-video-slider.git"
+  },
+  "keywords": [
+    "vue2",
+    "video",
+    "slider"
+  ],
+  "author": {
+    "name": "LittleChild",
+    "email": "work_yuanyang@163.com"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LittleChild/vue-video-slider/issues"
+  },
+  "homepage": "https://github.com/LittleChild/vue-video-slider#readme"
+}
