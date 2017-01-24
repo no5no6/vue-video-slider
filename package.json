@@ -1,8 +1,66 @@
 {
-  "name": "vue-video-slider",
-  "version": "0.0.1",
-  "description": "vue2.X video-slider",
-  "main": "index.js",
+  "_args": [
+    [
+      {
+        "raw": "vue-video-slider@git+https://github.com/LittleChild/vue-video-slider.git",
+        "scope": null,
+        "escapedName": "vue-video-slider",
+        "name": "vue-video-slider",
+        "rawSpec": "git+https://github.com/LittleChild/vue-video-slider.git",
+        "spec": "git+https://github.com/LittleChild/vue-video-slider.git",
+        "type": "hosted",
+        "hosted": {
+          "type": "github",
+          "ssh": "git@github.com:LittleChild/vue-video-slider.git",
+          "sshUrl": "git+ssh://git@github.com/LittleChild/vue-video-slider.git",
+          "httpsUrl": "git+https://github.com/LittleChild/vue-video-slider.git",
+          "gitUrl": "git://github.com/LittleChild/vue-video-slider.git",
+          "shortcut": "github:LittleChild/vue-video-slider",
+          "directUrl": "https://raw.githubusercontent.com/LittleChild/vue-video-slider/master/package.json"
+        }
+      },
+      "/Users/yuanyang/github/vue2.0-test"
+    ]
+  ],
+  "_from": "git+https://github.com/LittleChild/vue-video-slider.git",
+  "_id": "vue-video-slider@0.0.1",
+  "_inCache": true,
+  "_location": "/vue-video-slider",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "vue-video-slider@git+https://github.com/LittleChild/vue-video-slider.git",
+    "scope": null,
+    "escapedName": "vue-video-slider",
+    "name": "vue-video-slider",
+    "rawSpec": "git+https://github.com/LittleChild/vue-video-slider.git",
+    "spec": "git+https://github.com/LittleChild/vue-video-slider.git",
+    "type": "hosted",
+    "hosted": {
+      "type": "github",
+      "ssh": "git@github.com:LittleChild/vue-video-slider.git",
+      "sshUrl": "git+ssh://git@github.com/LittleChild/vue-video-slider.git",
+      "httpsUrl": "git+https://github.com/LittleChild/vue-video-slider.git",
+      "gitUrl": "git://github.com/LittleChild/vue-video-slider.git",
+      "shortcut": "github:LittleChild/vue-video-slider",
+      "directUrl": "https://raw.githubusercontent.com/LittleChild/vue-video-slider/master/package.json"
+    }
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/LittleChild/vue-video-slider.git#9d7058c1e7d7dbe85c529bef3d8151f481e2cef6",
+  "_shasum": "c393b4f68024e3317392b7f2dcafc86bc7c6bf46",
+  "_shrinkwrap": null,
+  "_spec": "vue-video-slider@git+https://github.com/LittleChild/vue-video-slider.git",
+  "_where": "/Users/yuanyang/github/vue2.0-test",
+  "author": {
+    "name": "LittleChild",
+    "email": "work_yuanyang@163.com"
+  },
+  "bugs": {
+    "url": "https://github.com/LittleChild/vue-video-slider/issues"
+  },
   "dependencies": {
     "dragdealer": "^0.9.9",
     "lodash": "^4.17.4",
@@ -11,23 +69,23 @@
     "vue-video-player": "^2.5.0",
     "vuex": "^2.1.1"
   },
+  "description": "vue2.X video-slider",
   "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LittleChild/vue-video-slider.git"
-  },
+  "gitHead": "9d7058c1e7d7dbe85c529bef3d8151f481e2cef6",
+  "homepage": "https://github.com/LittleChild/vue-video-slider#readme",
   "keywords": [
     "vue2",
     "video",
     "slider"
   ],
-  "author": {
-    "name": "LittleChild",
-    "email": "work_yuanyang@163.com"
-  },
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LittleChild/vue-video-slider/issues"
+  "main": "index.js",
+  "name": "vue-video-slider",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LittleChild/vue-video-slider.git"
   },
-  "homepage": "https://github.com/LittleChild/vue-video-slider#readme"
+  "version": "0.0.1"
 }

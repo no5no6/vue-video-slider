@@ -41,7 +41,6 @@ class Utils {
           memo += parseInt(value);
           break;
       }
-      console.log(memo, 'mmmmmmmmmmmeon');
       return memo;
     }, 0);
   }

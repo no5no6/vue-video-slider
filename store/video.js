@@ -75,6 +75,7 @@ const mutations = {
     state.beginInputStatus = true;
     state.endInputStatus = false;
     state.dotButtonText = '结束';
+    state.beginDotFormat = _.map(state.beginDotTime, 'value').join(':');
   },
   endDot(state) {
     state.dotState = 2;
@@ -82,7 +83,7 @@ const mutations = {
     state.beginInputStatus = true;
     state.endInputStatus = true;
     state.dotButtonText = '完成';
-    state.beginDotFormat = _.map(state.beginDotTime, 'value').join(':');
+    // state.beginDotFormat = _.map(state.beginDotTime, 'value').join(':');
     state.endDotFormat = _.map(state.endDotTime, 'value').join(':');
   },
   setDotFormat(state, {begin, end}) {

@@ -1,7 +1,7 @@
 <template>
   <div @click.stop="videoSetFocuse" :style="{width: Video.videoOptions.width + 'px'}">
-    <video-player v-if="Video.videoOptions" :options="Video.videoOptions" @timer="timeupdate" @player-state-changed="playerStateChanged" ></video-player>
-    <video-dot-slider :sliderWidth="Video.videoOptions.width" ></video-dot-slider>
+    <video-player v-if="Video.videoOptions" :options="Video.videoOptions" @player-state-changed="playerStateChanged" ></video-player>
+    <video-dot-slider @beginMark="beginMark" @endMark="endMark" :sliderWidth="Video.videoOptions.width" ></video-dot-slider>
     <time-input ></time-input>
   </div>
 </template>
@@ -9,10 +9,10 @@
 <script>
   import { videoPlayer } from 'vue-video-player';
   import busEvent from './utils/busEvent';
-  import { mapActions, mapState } from 'vuex';
   import store from './store';
   import VideoDotSlider from './components/VideoDotSlider';
   import TimeInput from './components/TimeInput';
+  import utils from './utils/utils';
 
   export default {
     name: 'VideoSlider',
@@ -43,9 +43,14 @@
           }
         }
       }
-
     },
     methods: {
+      beginMark() {
+        this.$emit('mark', {begin: utils.getMsByFormatTime(_.map(this.Video.beginDotTime, 'value'))});
+      },
+      endMark() {
+        this.$emit('mark', {end: utils.getMsByFormatTime(_.map(this.Video.endDotTime, 'value'))});
+      },
       bindEvent(){
         busEvent.$on('syncVideo',(action, options) =>{
           this.$emit('playerAction', action, options);
@@ -56,40 +61,20 @@
       },
       initVideoOptions() {
         store.dispatch('videoInit', this.options);
-        if(this.options) {
-          this.videoOptions = this.options;
-        }else {
-          this.videoOptions = {
-            source: {
-              type: "video/mp4",
-              src: "http://vjs.zencdn.net/v/oceans.mp4",
-            },
-            language: 'zh-CN',
-            controlBar: {
-              fullscreenToggle: false,
-              volumeMenuButton: false,
-              remainingTimeDisplay: false
-            },
-            autoplay: false,
-            width: "640",
-            height: "360",
-          }
-        }
+        this.videoOptions = this.options;
       },
-      timeupdate() {
-
-      },
-      playerStateChanged({pause=false, ended=false, loadeddata=false, waiting=false, playing=false}) {
-        if(pause){
+      playerStateChanged(options) {
+        if(options.pause){
           busEvent.$emit('pause');
           store.dispatch('playState', {status: false});
-        }else if(waiting){
+        }else if(options.waiting){
           busEvent.$emit('pause');
           store.dispatch('playState', {status: false});
-        }else if(playing){
+        }else if(options.playing){
           busEvent.$emit('play');
           store.dispatch('playState', {status: true});
         }
+        this.$emit('player-state-changed', options);
       },
       /**
       * 1、空格键控制暂停开始
@@ -180,5 +165,4 @@
 </script>
 
 <style>
-
 </style>

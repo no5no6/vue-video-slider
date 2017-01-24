@@ -1,9 +1,11 @@
 <template>
   <div :style="{width: Video.sliderWidth + 'px'}" >
     <div id="just-a-slider" class="dragdealer">
-      <div id="progress" :style="{width: Video.leftDiv + 'px'}"></div>
-      <div id="progress2" :style="[{width: Video.dotWidth + 'px'}, {'margin-left': Video.leftDiv + 'px'}]"></div>
-      <div id="progress3" :style="{'margin-left': Video.leftCurrentPointWidth+'px'}"></div>
+      <div id="progress0" :style="{width: Video.sliderWidth + 'px'}">
+        <div id="progress1" :style="{width: Video.leftDiv + 'px'}"></div>
+        <div id="progress2" :style="[{width: Video.dotWidth + 'px'}, {'margin-left': Video.leftDiv + 'px'}]"></div>
+        <div id="progress3" :style="{'margin-left': Video.leftCurrentPointWidth+'px'}"></div>
+      </div>
       <div class="handle red-bar">
         <span id="sliderValue" @dblclick="dot" class="value">{{Video.dotButtonText}}</span>
       </div>
@@ -33,9 +35,11 @@
         if(this.Video.dotButtonText === '开始'){
           store.dispatch('beginDot', {status: 1});
           this.$emit('syncDotTimeBeginInput');
+          this.$emit('beginMark');
         }else{
           store.dispatch('endDot', {status: 2});
           bus.slider.disabled = true;
+          this.$emit('endMark');
         }
       },
       bindEvent() {
@@ -110,20 +114,31 @@
   .red-bar {
     width: 1px!important;
   }
-  #progress {
+  /*.dragdealer {
+    z-index: -2;
+  }*/
+  #progress0 {
     height: 20px;
-    background-color: green;
+    background-color: #58B7FF;
+    position:absolute;
+    left:0;
+    top:0;
+
+  }
+  #progress1 {
+    height: 20px;
+    background-color: #58B7FF;
     position:absolute;
     left:0;
     top:0;
   }
   #progress2 {
     height: 20px;
-    background-color: pink;
+    background-color: #FF4949;
     position:absolute;
   }
   #progress3 {
     height: 20px;
-    background-color: yellow;
+    background-color: #99A9BF;
   }
 </style>
