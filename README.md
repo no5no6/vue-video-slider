@@ -1,6 +1,6 @@
 # vue-video-slider
 
-视频辅助条 支持Vue2.X。基于[vue-video-player](https://github.com/surmon-china/vue-video-player) 和 [dragdealer](https://github.com/skidding/dragdealer)项目
+视频辅助条。基于 [Vue](https://github.com/vuejs/vue) 2.X、[vue-video-player](https://github.com/surmon-china/vue-video-player) 和 [dragdealer](https://github.com/skidding/dragdealer)项目
 ## 示例
 
 ![example](example.gif)
