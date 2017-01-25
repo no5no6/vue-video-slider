@@ -7,9 +7,9 @@
 
 ## 功能
 
-1、对视频播放某个段落进行标注，并获得段落区间范围。
+1、对视频播放段落进行标注，并获得段落区间范围。
 
-2、视频视频区域获得焦点后，可用 `space` 键操作暂停播放。如果在视频暂停的情况下 `Q` 键可操作开始结束按钮， `←` `→` 键可控制前进后退。
+2、视频区域获得焦点后，可用 `space` 键操作暂停与播放。如果在视频暂停的情况下 `Q` 键可操作开始结束按钮， `←` `→` 键可控制前进后退。
 
 3、视频、视频辅助条、文本框的同步。（目前暂不支持操作视频本身进度条的同步）。
 
@@ -63,5 +63,5 @@ npm i vue-video-slider --save
 ## 事件
 | 名称        | 描述 | 示例 |
 | :---------------| :---------------| :------ |
-| mark    | 标注起始时间和结束时间时触发      | `@mark="youMethod"`      |
-| player-state-changed | 视频事件，请参考[vue-video-player](https://github.com/surmon-china/vue-video-player) |  `@player-state-changed="youMethod"`      |
+| mark    | 标注起始时间和结束时间时触发      | `@mark="yourMethod"`      |
+| player-state-changed | 视频事件，请参考[vue-video-player](https://github.com/surmon-china/vue-video-player) |  `@player-state-changed="yourMethod"`      |
