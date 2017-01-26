@@ -58,6 +58,8 @@
         }),
         busEvent.$on('pause', yy =>{
           clearInterval(this.timer);
+          // 同步缩略图和slider滑条, 停止时候同步避免多次快速暂停播放导致视频时间和定时器时间差异
+          bus.slider.setValue(bus.slider.getValue()[0] + this.Video.sliderStep);
         })
       },
     },
