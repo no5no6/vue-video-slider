@@ -15,7 +15,9 @@
 
 ## 安装
 
-npm i vue-video-slider --save
+```
+npm install vue-video-slider --save
+```
 
 ## 使用
 
